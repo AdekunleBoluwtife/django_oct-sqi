@@ -1,0 +1,31 @@
+{% extends "partials/base.html" %}
+
+
+{% block title %}
+    <title>dtl test</title>
+{% endblock title %}
+    
+ {% block body %}
+    
+ <h1>The name of the food we wil be considering is {{ food }}</h1>
+
+    
+    <ul>
+    {% for ingredient  in  ingredients %}
+    <li> 
+        {{ ingredient }}
+    </li>
+    {% endfor %}
+    </ul>
+    
+    {% if is_favorite %}
+     <p>Rice is my favorite food</p>
+    {% else %}
+     <p>Rice is not my favorite food</p>
+    {% endif %}
+
+    <p>It takes {{ time_to_cook_in_mins }} minutes to cook {{ food }}</p>
+
+ {% endblock body %}
+
+    
